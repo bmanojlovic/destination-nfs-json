@@ -1,0 +1,21 @@
+data:
+  registries:
+    oss:
+      enabled: false
+    cloud:
+      enabled: false
+  connectorSubtype: database
+  connectorType: destination
+  definitionId: 822fb337-d661-46e5-8fec-3369e8eeb4e7
+  dockerImageTag: 0.1.0
+  dockerRepository: airbyte/destination-nfs-json
+  githubIssueLabel: destination-nfs-json
+  icon: icon
+  license: MIT
+  name: NFS JSON
+  releaseDate: 2023-07-25
+  releaseStage: alpha
+  documentationUrl: https://docs.airbyte.com/integrations/destinations/destination-nfs-json
+  tags:
+    - language:python
+metadataSpecVersion: "1.0"

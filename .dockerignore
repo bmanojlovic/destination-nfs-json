@@ -1,0 +1,5 @@
+*
+!Dockerfile
+!main.py
+!destination_nfs_json
+!setup.py

@@ -1,0 +1,43 @@
+{
+  "documentationUrl": "https://docs.airbyte.com/integrations/destinations/scaffold-destination-python",
+  "supported_destination_sync_modes": [ "overwrite", "append"],
+  "supportsIncremental": true,
+  "connectionSpecification": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Destination NFS JSON",
+    "type": "object",
+    "required": ["host","nfsversion", "shared_directory", "destination_path"],
+    "additionalProperties": false,
+    "properties": {
+      "host": {
+        "type": "string",
+        "description": "Hostname of NFS Server",
+        "examples": ["nfsserver", "10.10.10.10"],
+        "order": 0
+      },
+      "nfsversion": {
+        "title": "NFS Version",
+        "description": "Which NFS version to use while connectiong",
+        "type": "string",
+        "default": "4",
+        "enum": [
+          "4",
+          "3"
+        ],
+        "order": 1
+      },
+      "shared_directory": {
+        "type": "string",
+        "description": "NFS Shared path",
+        "examples": [ "/shared" ],
+        "order": 2
+      },
+      "destination_path": {
+        "type": "string",
+        "description": "Path to directory where to write json files",
+        "examples": [ "data/output" ],
+        "order": 3
+      }
+    }
+  }
+}
